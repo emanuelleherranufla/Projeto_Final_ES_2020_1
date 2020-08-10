@@ -1,0 +1,807 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,body{
+	height: 100%;
+}
+
+.container{
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1280px;
+}
+
+.clear{
+	clear: both;
+}
+
+/******** cabeçalho 1 ********/
+header{
+	padding: 15px 2%;
+}
+
+.logo{
+	position: absolute;
+	background-image: url('../imagens/logo.png');	
+	width: 127px;
+	height: 77px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+
+.container2{
+	position: relative;
+	top: 15px;
+}
+
+.nome-usuario{
+	float: right;
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 20px;
+}
+
+.nome-usuario a{
+	color: black;
+}
+
+.input-busca input{
+	position: absolute;
+	width: 761px;
+	height: 47px;
+	left: 160px;
+	background: #FFFFFF;
+	border: 1px solid #C4C4C4;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	padding: 0 20px;
+	font-family: 'Martel', serif;
+	font-size: 18px;
+}
+
+::-webkit-input-placeholder {
+   color: #ABABAB;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #ABABAB;  
+}
+
+:-ms-input-placeholder {  
+   color: #ABABAB;; 
+}
+
+.btn-pesquisar input{
+	position: absolute;
+	background-image: url(../imagens/procurar.png);
+	background-size: 100% 100%;	
+	width: 49px;
+	height: 46px;
+	left: 872px;	
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.carrinho input{
+	position: absolute;
+	background-image: url(../imagens/supermercado.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: white;
+	width: 47px;
+	height: 47px;
+	left: 970px;
+	border: none;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.usuario input{
+	background-image: url(../imagens/do-utilizador.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: white;
+	position: absolute;
+	width: 47px;
+	height: 47px;
+	left: 1070px;
+	border: none;
+	cursor: pointer;	
+}
+
+/****** cabeçalho 2 ******/
+.container-menu{
+	position: relative;
+	max-width: 1000px;
+	margin-left: 450px;
+}
+
+.menu-principal{
+	width: 100%;
+	height: 45px;
+	background-color: black;
+	margin-top: 30px;
+}
+
+.menu{
+	float: right;
+	margin-top: 8px;
+	position: relative;
+}
+
+.menu li{
+	list-style-type: none;
+	display: inline-block;
+}
+
+.menu a{
+	text-decoration: none;
+	color: white;
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 24px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.menu-button{
+	background-image: url(../imagens/menu.png);
+	width: 32px;
+	height: 32px;
+	background-size: 100% 100%;
+	margin-top: 8px;
+	border: none;
+	cursor: pointer;
+	background-color: black;
+}
+
+.menu-hamburguer{
+	position: relative;
+	float: left;
+	display: inline-block;
+}
+
+.dropdown-menu{
+	display: none;
+	width: 522px;
+	height: 160px;
+	background-color: white;
+	position: absolute;
+	top: 45px;
+	border: 2px solid #E0E0E0;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);	
+	z-index: 1;
+}
+
+.dropdown-menu p{
+	color: black;
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 24px;
+	margin-left: 20px;	
+	margin-top: 15px;
+	margin-bottom: 20px;
+	font-weight: bolder;
+}
+
+.dropdown-menu a{
+	text-decoration: none;
+	color: black;
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 20px;
+	margin-left: 20px;
+}
+
+.dropdown-menu a:hover{
+	background-color: #000;
+	color: #fff;
+}
+
+.menu-hamburguer:hover .dropdown-menu{
+	display: block;
+}
+
+.menu-hamburguer:hover .menu-button{
+	background-color: transparent;
+}
+
+/****** banner ******/
+.container-banner{
+	width: 100%;
+	height: 500px;
+	background-color: grey;
+	position: absolute;
+	background-image: url('../imagens/banner.jpg');
+}
+
+/*** seção produtos ***/
+.lancamentos{
+	padding: 550px 2%;
+}
+
+.lancamentos .container{
+	position: relative;
+	padding: 40px 0;
+}
+
+.titulo h2{
+	font-family: 'Maven Pro', sans-serif;	
+	font-weight: bolder;
+	font-size: 36px;
+}
+
+.roupa-img{
+	background-image: url('../imagens/vestido.jpg');
+	background-size: 100% 100%;
+	padding-top: 100%;
+}
+
+.produto-destaque{
+	float: left;
+	width: 25%;
+	max-height: 450px;
+	padding: 15px;
+	padding-bottom: 40px;
+	border: 1px 
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	margin-top: 30px;
+}
+
+.produto-destaque h2{
+	font-family: 'K2D', sans-serif;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.produto-destaque h4{
+	font-family: 'K2D', sans-serif;
+	padding-left: 10px;
+	padding-top: 10px;
+	color: #898989;	
+	display: inline;
+}
+
+.produto-destaque h3{
+	font-family: 'K2D', sans-serif;
+	padding-left: 10px;
+	padding-top: 10px;	
+	display: inline;
+}
+
+.produto-destaque a{
+	text-align: center;
+	text-decoration: none;
+	font-family: 'K2D', sans-serif;
+	display: block;
+	padding: 10px;
+	background-color: black;
+	color: white;
+	border-radius: 30px;
+	margin-top: 10px;
+}
+
+/**** gerenciar produtos ****/
+
+.titulo-pagina{
+	font-family: 'Maven Pro', sans-serif;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	font-weight: bolder;
+	font-size: 24px;
+}
+
+.card{
+	position: relative;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);	
+	padding: 30px 2%;
+	margin: 40px 0;
+}
+
+.card h3{
+	font-family: 'Maven Pro', sans-serif;
+	color: #898989;
+	font-size: 24px;
+}
+
+.card ul{
+	list-style-type: none;
+}
+
+.card ul li{
+	margin: 15px 0;
+}
+
+.card a{
+	font-family: 'Maven Pro', sans-serif;	
+	color: black;
+}
+
+/****** tela login *******/
+.card-login .container{
+	max-width: 800px;
+	min-height: 340px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);	
+	padding: 30px 2%;
+	margin-bottom: 70px;
+}
+
+.card-login p{
+	font-family: 'Maven Pro', sans-serif;	
+	color: #898989;
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.card-login input[type=e-mail]{
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	font-family: 'Maven Pro', sans-serif;
+	color: #ABABAB;
+	font-size: 20px;
+	padding-left: 15px;
+	margin-bottom: 20px;
+}
+
+.card-login input[type=password]{
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	font-family: 'Maven Pro', sans-serif;
+	color: #ABABAB;
+	font-size: 20px;
+	padding-left: 15px;
+	margin-bottom: 15px;
+}
+
+.link1{
+	display: inline-block;
+	float: right;
+	color: #898989;
+	font-family: Maven Pro;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.card-login input[type=submit]{
+	position: relative;
+	left: 200px;
+	width: 134px;
+	height: 45px;
+	color: white;
+	background: black;
+	border-radius: 30px;	
+	margin-top: 50px;
+	border: none;
+	cursor: pointer;
+	font-family: Maven Pro;
+	font-size: 20px;
+}
+
+.link2{
+	color: black;
+	font-family: Maven Pro;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;	
+}
+
+
+/*** tela cadastro ***/
+.card-cadastro .container{
+	max-width: 800px;
+	min-height: 800px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);	
+	padding: 30px 2%;
+	margin-bottom: 70px;
+}
+
+.card-cadastro p{
+	font-family: 'Maven Pro', sans-serif;	
+	color: #898989;
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.card-cadastro .inputs1 input{
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	font-family: 'Maven Pro', sans-serif;
+	color: #545454;
+	font-size: 20px;
+	padding-left: 15px;
+	margin-bottom: 20px;
+}
+
+.card-cadastro label{
+	font-family: 'Maven Pro', sans-serif;
+	color: #898989;
+	font-size: 18px;
+}
+
+.card-cadastro .inputs2 input{
+	float: left;
+	width: 175px;
+	height: 50px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	font-family: 'Maven Pro', sans-serif;
+	color: #545454;
+	font-size: 20px;
+	margin-bottom: 20px;
+	margin-right: 10px;
+	margin-top: 20px;
+	padding-left: 15px;
+}
+
+.card-cadastro .inputs2 label{
+	float: left;
+	margin-right: 5px;
+	margin-top: 30px;
+}
+
+.card-cadastro .inputs3 input{
+	float: left;
+	width: 285px;
+	height: 50px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	font-family: 'Maven Pro', sans-serif;
+	color: #545454;
+	font-size: 20px;
+	margin-bottom: 20px;
+	margin-right: 10px;
+	margin-top: 20px;	
+	padding-left: 15px;
+	display: inline-block;
+}
+
+.card-cadastro .inputs3 label{
+	float: left;
+	margin-right: 5px;
+	margin-top: 30px;
+}
+
+.card-cadastro a{
+	float: left;
+	color: black;
+	font-family: Maven Pro;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	margin-top: 30px;
+}
+
+.card-cadastro input[type=submit]{
+	float: right;
+	width: 134px;
+	height: 45px;
+	color: white;
+	background: black;
+	border-radius: 30px;	
+	margin-top: 20px;
+	border: none;
+	cursor: pointer;
+	font-family: Maven Pro;
+	font-size: 20px;	
+}
+
+/******* cadastrar roupas *****/
+.card-cadastro-roupa .container{
+	max-width: 1000px;
+	min-height: 920px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);	
+	padding: 30px 2%;
+	margin-bottom: 70px;
+}
+
+.container1-roupa{
+	float: left;
+	width: 80%;
+}
+
+form .inputs-card-roupas1 input{
+	width: 30%;
+	height: 50px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	font-family: 'Maven Pro', sans-serif;
+	color: #545454;
+	font-size: 20px;
+	padding-left: 15px;
+	margin-bottom: 20px;
+}
+
+form .inputs-card-roupas2 input{
+	width: 90%;
+	height: 50px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	font-family: 'Maven Pro', sans-serif;
+	color: #545454;
+	font-size: 20px;
+	padding-left: 15px;
+	margin-bottom: 20px;
+}
+
+form .inputs-card-roupas3{
+	float: left;
+}
+
+form .inputs-card-roupas3 input{
+	width: 253px;
+	height: 50px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	font-family: 'Maven Pro', sans-serif;
+	color: #545454;
+	font-size: 20px;
+	padding-left: 15px;
+	margin-bottom: 20px;
+}
+
+form .inputs-card-roupas4{
+	float: left;
+}
+
+form .inputs-card-roupas4 input{
+	width: 146px;
+	height: 50px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	font-family: 'Maven Pro', sans-serif;
+	color: #545454;
+	font-size: 20px;
+	padding-left: 15px;
+	margin-bottom: 20px;
+}
+
+form .inputs-card-roupas5{
+	float: right;
+	width: 20%;
+}
+
+form .inputs-card-roupas6 p{
+	font-family: 'Maven Pro', sans-serif;	
+	color: #898989;
+	font-size: 18px;
+	margin-bottom: 20px;	
+}
+
+form .inputs-card-roupas6 input{
+	width: 80px;
+	height: 50px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	font-family: 'Maven Pro', sans-serif;
+	color: #545454;
+	font-size: 20px;
+	padding-left: 15px;
+	margin-bottom: 20px;	
+}
+
+form .inputs-card-roupas7 input{
+	width: 150px;
+	height: 50px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	font-family: 'Maven Pro', sans-serif;
+	color: #545454;
+	font-size: 20px;
+	padding-left: 15px;
+	margin-bottom: 20px;	
+}
+
+#descricao{
+	width: 900px;
+	height: 150px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	font-family: 'Maven Pro', sans-serif;
+	color: #545454;
+	font-size: 20px;
+	padding-left: 15px;
+	margin-bottom: 20px;	
+}
+
+.btn-img{
+	font-family: 'Maven Pro', sans-serif;
+	color: white;
+	width: 134px;
+	height: 45px;
+	padding: 10px 20px;	
+	background: #000000;
+	border-radius: 30px;	
+	cursor: pointer;
+	margin: 10px 28px;
+	font-size: 18px;
+}
+
+.btn-novo-salvar{
+	float: right;
+}
+
+.btn-novo-salvar input[type=reset]{
+	width: 134px;
+	height: 45px;
+	background: #000000;
+	border-radius: 30px;
+	font-family: 'Maven Pro', sans-serif;
+	color: white;	
+	border: none;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.btn-novo-salvar input[type=submit]{
+	width: 134px;
+	height: 45px;
+	background: #6F0C0C;
+	border-radius: 30px;
+	font-family: 'Maven Pro', sans-serif;
+	color: white;	
+	border: none;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+form label{
+	font-family: 'Maven Pro', sans-serif;
+	color: #898989;
+	font-size: 18px;	
+	display: inline-block;
+}
+
+/**** cadastrar calçado ******/
+.card-cadastro-calcado .container{
+	max-width: 1000px;
+	min-height: 780px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);	
+	padding: 30px 2%;
+	margin-bottom: 70px;
+}
+
+/**** cadastrar acessorio ******/
+.card-cadastro-acessorio .container{
+	max-width: 1000px;
+	min-height: 610px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);	
+	padding: 30px 2%;
+	margin-bottom: 70px;
+}
+
+/**** alterar  ****/
+.card-pesquisa-codigo .container{
+	max-width: 1000px;
+	min-height: 220px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);	
+	padding: 30px 2%;
+	margin-bottom: 40px;	
+}
+
+.card-pesquisa-codigo h2{
+	font-family: 'Maven Pro', sans-serif;
+	color: #898989;
+	font-size: 30px;
+	margin-bottom: 20px;	
+}
+
+.card-pesquisa-codigo input[type=text]{
+	width: 200px;
+	height: 50px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	font-family: 'Maven Pro', sans-serif;
+	color: #545454;
+	font-size: 20px;
+	padding-left: 15px;
+	margin-bottom: 20px;
+}
+
+.card-pesquisa-codigo input[type=submit]{
+	float: right;
+	width: 134px;
+	height: 45px;
+	background: #000000;
+	border-radius: 30px;
+	font-family: 'Maven Pro', sans-serif;
+	color: white;	
+	border: none;
+	font-size: 18px;	
+	cursor: pointer;
+}
+
+/**** excluir ****/
+.btn-excluir input[type=submit]{
+	position: relative;
+	float: right;
+	width: 134px;
+	height: 45px;
+	background: #6F0C0C;
+	border-radius: 30px;
+	font-family: 'Maven Pro', sans-serif;
+	color: white;	
+	border: none;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.card-excluir-roupa .container{
+	max-width: 1000px;
+	min-height: 940px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);	
+	padding: 30px 2%;
+	margin-bottom: 70px;
+}
+
+.card-excluir-calcado .container{
+	max-width: 1000px;
+	min-height: 800px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);	
+	padding: 30px 2%;
+	margin-bottom: 70px;
+}
+
+.card-excluir-acessorio .container{
+	max-width: 1000px;
+	min-height: 600px;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);	
+	padding: 30px 2%;
+	margin-bottom: 70px;
+}
