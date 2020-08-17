@@ -1,12 +1,12 @@
 # Lilith Store
 
-É um e-commerce especializado na venda de roupas, calçados e acessórios do mundo alternativo. O que será desenvolvido no trabalho, a princípio, será a parte do administrador que poderá fazer a consulta de clientes, cadastro de mercadorias, exclusão de mercadorias, consulta de mercadorias.
+É um e-commerce especializado na venda de roupas, calçados e acessórios do mundo alternativo. As principais funcionalidades desenvolvidas no projeto se referem a parte do administrador, onde ele poderá fazer seu próprio cadastro e login na plataforma. Após o login, o usuário administrador pode realizar as seguintes operações: cadastro de produtos, alteração de produtos, exclusão de produtos, alteração dos dados da própria conta, exclusão da própria conta e logout.
 
 # Tecnologias utilizadas
 
 **Linguagens**
 
-HTML5, CSS, PHP 7.4.7
+HTML5, CSS, PHP 7.4.7, JavaScript
 
 **Banco de dados**
 
