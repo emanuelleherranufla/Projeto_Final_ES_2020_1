@@ -24,7 +24,7 @@
 					<input type="button" name="carrinho">	
 				</div><!-- carrinho de compra -->
 				<div class="usuario">
-					<input type="button" name="usuario">	
+					<a href="../controller/alterar-dados-cliente.php"></a>	
 				</div><!-- menu usuario -->
 				<div class="nome-usuario">
 					<p>Olá, </p>
@@ -66,12 +66,12 @@
 				<div class="container1-roupa">
 				<div class="inputs-card-roupas2">
 					<label for="nome-produto">Nome</label>
-					<input type="text" name="nome" required>					
+					<input type="text" name="nome" maxlength="80" required>					
 				</div>
 
 				<div class="inputs-card-roupas3">
 					<label for="categoria">Categoria</label>
-					<input list="categorias" name="categoria" id="categoria" required>
+					<input list="categorias" name="categoria" id="categoria" maxlength="15" required>
 						<datalist id="categorias">
 						  	<option value="Blusa">
 						    <option value="Camiseta">
@@ -80,7 +80,7 @@
 						    <option value="Vestido">
 						</datalist>	
 					<label for="tipo">Tipo</label>
-					<input list="tipos" name="tipo" id="tipo" required>
+					<input list="tipos" name="tipo" id="tipo" maxlength="10" required>
 						<datalist id="tipos">
 						  	<option value="Feminino">
 						    <option value="Masculino">
@@ -89,11 +89,11 @@
 
 				<div class="inputs-card-roupas4">
 					<label for="marca">Marca</label>
-					<input type="text" name="marca" required>
+					<input type="text" name="marca" maxlength="20" required>
 					<label for="quantidade">Quantidade</label>
-					<input type="number" name="quantidade" required>
+					<input type="number" name="quantidade" maxlength="10" required>
 					<label for="cor">Cor</label>
-					<input type="text" name="cor" required>					
+					<input type="text" name="cor" maxlength="20" required>					
 				</div>					
 				</div>
 
@@ -106,13 +106,13 @@
 				<div class="inputs-card-roupas6">
 					<p>Quantidade por tamanho(Roupas)</p>
 					<label for="tamP">P</label>
-					<input type="number" name="tamP" required><br>
+					<input type="number" name="tamP" maxlength="10" required><br>
 					<label for="tamM">M</label>
-					<input type="number" name="tamM" required><br>
+					<input type="number" name="tamM" maxlength="10" required><br>
 					<label for="tamG">G</label>
-					<input type="number" name="tamG" required><br>
+					<input type="number" name="tamG" maxlength="10" required><br>
 					<label for="tamGG">GG</label>
-					<input type="number" name="tamGG" required><br>
+					<input type="number" name="tamGG" maxlength="10" required><br>
 				</div>		
 
 				<div class="inputs-card-roupas7">
@@ -121,7 +121,7 @@
 					<label for="precoNovo">Preço(Atual)</label>
 					<input name="precoNovo" formControlName="sGPTypeDeliveryId" type="text" class="form-control" required="required"><br>
 					<label for="descricao">Descrição</label><br>
-					<textarea id="descricao" name="descricao"></textarea>
+					<textarea maxlength="200" id="descricao" name="descricao"></textarea>
 				</div>
 
 				<div class="btn-novo-salvar">

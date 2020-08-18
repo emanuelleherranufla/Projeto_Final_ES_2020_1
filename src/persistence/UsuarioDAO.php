@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 class UsuarioDAO{
 	function __construct(){}
 
@@ -33,13 +35,36 @@ class UsuarioDAO{
 		$res = $conn->query($sql);
 		$senhaRetorno = mysqli_fetch_array($res);
 
-		session_start();
-
 		if($senhaRetorno[0] == $senha and $senha != ""){
 			$_SESSION["email"] = $email;
 			header('location:../view/index-login.html');
 		}else{
 			echo "Usuário ou senha incorretos, volte e tente novamente!";
+		}
+	}
+
+	function consultar_usuario($conn){
+		$email = $_SESSION["email"];
+		$sql = "SELECT Cpf, Email, Nome, Senha, Cidade, Estado, Rua, Bairro, Num FROM usuario WHERE Email = '" .$email . "'";
+		$res = $conn->query($sql);
+		return $res;
+	}
+
+	function alterar($u, $conn){
+		$email = $_SESSION["email"];
+		$sql = "UPDATE usuario SET Cpf='". $u->getCpf() . "', Nome='" . $u->getNome() . "', Email='" . $u->getEmail() . "', Senha='" . $u->getSenha() . "', Cidade='" . $u->getCidade() . "', Estado='" . $u->getEstado() ."',  Rua='" . $u->getRua() . "', Bairro='" . $u->getBairro() . "', Num=" . $u->getNumero() . " WHERE Email='" .$email . "'";
+		$res = $conn->query($sql);
+		return $res;
+	}
+
+	function excluir($conn){
+		$email = $_SESSION["email"];
+		$sql = "DELETE FROM usuario WHERE Email = '" .$email . "'";
+
+		if($conn->query($sql) == TRUE){
+			header('location:../index.html');
+		}else{
+			echo "erro na exclusao: <br>".$conn->error;
 		}
 	}
 }

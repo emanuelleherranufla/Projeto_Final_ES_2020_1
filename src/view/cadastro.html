@@ -23,7 +23,7 @@
 					<input type="button" name="carrinho">	
 				</div><!-- carrinho de compra -->
 				<div class="usuario">
-					<input type="button" name="usuario">	
+					<a href="login.html"></a>
 				</div><!-- menu usuario -->
 				<div class="nome-usuario">
 					<a href="login.html">Faça seu login</a>
@@ -67,31 +67,31 @@
 			<form action="..\controller\cadastro.php" method="POST">
 				<div class="inputs1">
 					<label for="nome">Nome completo</label>
-					<input type="text" name="nome" required>
+					<input type="text" name="nome" maxlength="80" required>
 					<label for="email">E-mail</label>
-					<input type="e-mail" name="email" required>
+					<input type="e-mail" name="email" maxlength="50" required>
 					<label for="confirma-email">Confirme seu e-mail</label>
-					<input type="e-mail" name="email" required>
+					<input type="e-mail" name="email" maxlength="50" required>
 					<label for="senha">Senha</label>
-					<input type="password" name="senha" required>
+					<input type="password" name="senha" maxlength="20" required>
 					<label for="cpf">CPF</label>
-					<input type="text" name="cpf" required>				
+					<input type="text" name="cpf" maxlength="11" required>				
 				</div>
 
 				<div class="inputs2">
 					<label for="rua">Rua</label>
-					<input type="text" name="rua" required>
+					<input type="text" name="rua" maxlength="80" required>
 					<label for="bairro">Bairro</label>
-					<input type="text" name="bairro" required>
+					<input type="text" name="bairro" maxlength="80" required>
 					<label for="numero">Número</label>
-					<input type="number" name="numero" required>				
+					<input type="number" name="numero" maxlength="15" size="15" required>				
 				</div>
 
 				<div class="inputs3">
 					<label for="cidade">Cidade</label>
-					<input type="text" name="cidade" required>
+					<input type="text" name="cidade" maxlength="50" required>
 					<label for="estado">Estado</label>
-					<input list="estados" name="estado" id="estado" required>
+					<input list="estados" name="estado" maxlength="2" id="estado" required>
 						<datalist id="estados">
 						  	<option value="MG">
 						    <option value="SP">
