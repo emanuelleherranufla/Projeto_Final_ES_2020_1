@@ -1,4 +1,4 @@
-<!-- Interface onde o usuário poderá preecher o campo código para que possa fazer uma exclusão do produto posteriormente-->
+<!-- Interface onde o usuário poderá preecher o campo código para que possa fazer uma busca do produto posteriormente-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,17 +58,18 @@
 	</section><!-- menu -->
 
 	<div class="titulo-pagina">
-		<h1>Excluir produto(roupa)</h1>
+		<h1>Buscar produto(acessório)</h1>
 	</div>
 
 	<section class="card-pesquisa-codigo">
 		<div class="container">
 			<h2>Informe o código do produto</h2>
-			<form method="POST" action="..\controller\excluir-roupa.php">
+			<form method="POST" action="..\controller\buscar-acessorio.php">
 				<input type="text" name="codigo" autocomplete="off" required><br>
 				<input type="submit" name="pesquisar" value="Pesquisar">				
 			</form>
 		</div>
 	</section>
+
 </body>
 </html>

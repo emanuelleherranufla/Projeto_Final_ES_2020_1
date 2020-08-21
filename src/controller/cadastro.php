@@ -1,4 +1,5 @@
 <?php
+#controlador responsável pelo cadastro do usuário
 
 include_once '..\persistence\Conexao.php';
 include_once '..\model\Usuario.php';

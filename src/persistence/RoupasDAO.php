@@ -1,4 +1,5 @@
 <?php
+#classe responsavel pela comunicação com o banco de dados na tabela roupa
 
 class RoupasDAO{
 	function __construct(){}

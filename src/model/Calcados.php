@@ -1,4 +1,5 @@
 <?php
+#classe Calcados com os metodos e atributos necessários
 
 class Calcados{
 	private $nome;

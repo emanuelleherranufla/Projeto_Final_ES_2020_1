@@ -1,4 +1,5 @@
 <?php
+#classe responsavel pela conexão com o banco de dados
 
 class Conexao{
 	private $servername="localhost";

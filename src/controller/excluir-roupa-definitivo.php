@@ -1,4 +1,5 @@
 <?php
+#controlador responsável por fazer a exclusão de um produto no banco de dados
 
 include_once '..\persistence\Conexao.php';
 include_once '..\persistence\RoupasDAO.php';

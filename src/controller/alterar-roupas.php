@@ -1,4 +1,5 @@
 <?php
+#controlador responsável por fazer a consulta de um produto e exibir suas informações para o usuário
 
 include_once '..\persistence\Conexao.php';
 include_once '..\persistence\RoupasDAO.php';

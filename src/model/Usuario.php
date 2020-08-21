@@ -1,4 +1,5 @@
 <?php
+#classe Usuario com os metodos e atributos necessários
 
 class Usuario{
 	private $cpf;

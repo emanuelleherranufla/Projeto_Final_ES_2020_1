@@ -1,4 +1,5 @@
 <?php
+#controlador responsável pelo cadastro de um produto
 
 include_once '..\persistence\Conexao.php';
 include_once '..\model\Acessorios.php';

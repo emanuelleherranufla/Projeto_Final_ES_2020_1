@@ -1,4 +1,5 @@
 <?php
+#classe Acessorios com os metodos e atributos necessários
 
 class Acessorios{
 	private $nome;

@@ -1,4 +1,5 @@
 <?php
+#controlador responsável por fazer a alteração das informações do usuário no banco de dados
 
 include_once '..\persistence\Conexao.php';
 include_once '..\model\Usuario.php';

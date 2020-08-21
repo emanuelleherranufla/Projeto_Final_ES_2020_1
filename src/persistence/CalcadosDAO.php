@@ -1,4 +1,5 @@
 <?php
+#classe responsavel pela comunicação com o banco de dados na tabela calcado
 
 class CalcadosDAO{
 	function __construct(){}

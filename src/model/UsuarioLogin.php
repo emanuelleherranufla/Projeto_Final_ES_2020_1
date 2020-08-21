@@ -1,4 +1,5 @@
 <?php
+#classe UsuarioLogin com os metodos e atributos necessários para o login
 
 class UsuarioLogin{
 	private $email;

@@ -1,4 +1,5 @@
 <?php
+#controlador responsável por fazer a consulta de um usuario e exibir suas informações para que o mesmo possa fazer alterações em seus dados pessoais
 
 include_once '..\persistence\Conexao.php';
 include_once '..\persistence\UsuarioDAO.php';

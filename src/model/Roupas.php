@@ -1,4 +1,5 @@
 <?php
+#classe Roupas com os metodos e atributos necessários
 
 class Roupas{
 	private $nome;

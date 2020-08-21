@@ -1,4 +1,5 @@
 <?php
+#controlador responsável por fazer a alteração de um produto no banco de dados
 
 include_once '..\persistence\Conexao.php';
 include_once '..\model\Roupas.php';

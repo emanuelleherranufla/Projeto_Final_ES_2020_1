@@ -1,4 +1,5 @@
 <?php
+#controlador responsável pelo login do usuário no site
 
 include_once '..\persistence\Conexao.php';
 include_once '..\model\UsuarioLogin.php';

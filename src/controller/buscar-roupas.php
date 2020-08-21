@@ -1,16 +1,16 @@
 <?php
-#controlador responsável por fazer a consulta de um produto e exibir suas informações para o usuário
+#controlador responsável por fazer a busca de um determinado produto no banco de dados
 
 include_once '..\persistence\Conexao.php';
-include_once '..\persistence\CalcadosDAO.php';
+include_once '..\persistence\RoupasDAO.php';
 
 $codigo= $_POST['codigo'];
 
 $conexao = new Conexao();
 $conexao = $conexao->getConnection();
 
-$calcadodao = new CalcadosDAO();
-$res = $calcadodao->consultar_codigo($codigo, $conexao);
+$roupadao = new RoupasDAO();
+$res = $roupadao->consultar_codigo($codigo, $conexao);
 
 if($res->num_rows > 0){
 	$registro = $res->fetch_assoc();
@@ -32,7 +32,7 @@ if($res->num_rows > 0){
 				<div class='logo'></div><!-- logo -->
 				<div class='container2'>
 					<div class='input-busca'>
-						<input type='text' name='barra-pesquisa' placeholder='O que deseja encontrar?'>
+						<input type='text' name='barra-pesquisa' placeholder='O que deseja encontrar?''>
 					</div><!-- barra de pesquisa -->
 					<div class='btn-pesquisar'>
 						<input type='button' name='pesquisar'>
@@ -64,22 +64,22 @@ if($res->num_rows > 0){
 				</div>
 				<nav class='menu'>
 					<ul>
-						<li><a href='>Feminino</a></li>
-						<li><a href='>Masculino</a></li>
-						<li><a href='>Calçados</a></li>
-						<li><a href='>Acessórios</a></li>
+						<li><a href=''>Feminino</a></li>
+						<li><a href=''>Masculino</a></li>
+						<li><a href=''>Calçados</a></li>
+						<li><a href=''>Acessórios</a></li>
 					</ul>
 				</nav>
 			</div>
 		</section><!-- menu -->
 
 		<div class='titulo-pagina'>
-			<h1>Alterar dados do produto(calçado)</h1>
+			<h1>Visualizando informações da roupa</h1>
 		</div>
 
-		<section class='card-cadastro-calcado'>
-			<div class='container' style='min-height: 820px;'>
-				<form method='POST' action='alterar-calcado-definitivo.php' enctype='multipart/form-data' autocomplete='off'>
+		<section class='card-cadastro-roupa'>
+			<div class='container' style='min-height: 920px;'>
+				<form method='POST' action='' enctype='multipart/form-data' autocomplete='off'>
 					<div class='container1-roupa'>
 
 					<div class='inputs-card-roupas1'>
@@ -89,12 +89,12 @@ if($res->num_rows > 0){
 
 					<div class='inputs-card-roupas2'>
 						<label for='nome-produto'>Nome</label>
-						<input type='text' name='nome' value='".$registro['Nome']."'>					
+						<input type='text' name='nome' value='".$registro['Nome']."' disabled>					
 					</div>
 
 					<div class='inputs-card-roupas3'>
 						<label for='categoria'>Categoria</label>
-						<input list='categorias' name='categoria' id='categoria' value='".$registro['Categoria']."'>
+						<input list='categorias' name='categoria' id='categoria' value='".$registro['Categoria']."' disabled>
 							<datalist id='categorias'>
 							  	<option value='Blusa'>
 							    <option value='Camiseta'>
@@ -103,7 +103,7 @@ if($res->num_rows > 0){
 							    <option value='Vestido'>
 							</datalist>	
 						<label for='tipo'>Tipo</label>
-						<input list='tipos' name='tipo' id='tipo' value='".$registro['Tipo']."'>
+						<input list='tipos' name='tipo' id='tipo' value='".$registro['Tipo']."' disabled>
 							<datalist id='tipos'>
 							  	<option value='Feminino'>
 							    <option value='Masculino'>
@@ -112,11 +112,11 @@ if($res->num_rows > 0){
 
 					<div class='inputs-card-roupas4'>
 						<label for='marca'>Marca</label>
-						<input type='text' name='marca' value='".$registro['Marca']."'>
+						<input type='text' name='marca' value='".$registro['Marca']."' disabled>
 						<label for='quantidade'>Quantidade</label>
-						<input type='number' name='quantidade' value='".$registro['Quantidade']."'>
+						<input type='number' name='quantidade' value='".$registro['Quantidade']."' disabled>
 						<label for='cor'>Cor</label>
-						<input type='text' name='cor' value='".$registro['Cor']."'>					
+						<input type='text' name='cor' value='".$registro['Cor']."' disabled>					
 					</div>					
 					</div>
 
@@ -127,41 +127,25 @@ if($res->num_rows > 0){
 					</div>
 
 					<div class='inputs-card-roupas6'>
-						<p>Quantidade por tamanho(Calçados)</p>
-						<label for='tam35'>35</label>
-						<input type='number' name='tam35' value='".$registro['Qtd35']."'>
-						<label for='tam36'>36</label>
-						<input type='number' name='tam36' value='".$registro['Qtd36']."'>
-						<label for='tam37'>37</label>
-						<input type='number' name='tam37' value='".$registro['Qtd37']."'>
-						<label for='tam38'>38</label>
-						<input type='number' name='tam38' value='".$registro['Qtd38']."'>
-						<label for='tam39'>39</label>
-						<input type='number' name='tam39' value='".$registro['Qtd39']."'><br>
-						<label for='tam40'>40</label>
-						<input type='number' name='tam40' value='".$registro['Qtd40']."'>
-						<label for='tam41'>41</label>
-						<input type='number' name='tam41' value='".$registro['Qtd41']."'>
-						<label for='tam42'>42</label>
-						<input type='number' name='tam42' value='".$registro['Qtd42']."'>
-						<label for='tam43'>43</label>
-						<input type='number' name='tam43' value='".$registro['Qtd43']."'>
-						<label for='tam44'>44</label>
-						<input type='number' name='tam44' value='".$registro['Qtd44']."'>
-					</div>		
+						<p>Quantidade por tamanho(Roupas)</p>
+						<label for='tamP'>P</label>
+						<input type='number' name='tamP' value='".$registro['QtdP']."' disabled><br>
+						<label for='tamM'>M</label>
+						<input type='number' name='tamM' value='".$registro['QtdM']."' disabled><br>
+						<label for='tamG'>G</label>
+						<input type='number' name='tamG' value='".$registro['QtdG']."' disabled><br>
+						<label for='tamGG'>GG</label>
+						<input type='number' name='tamGG' value='".$registro['QtdGG']."' disabled><br>
+					</div>	
 
 					<div class='inputs-card-roupas7'>
 						<label for='precoAntigo'>Preço(Antigo)</label>
-						<input name='precoAntigo' formControlName='sGPTypeDeliveryId' type='text' class='form-control' value='".$registro['PrecoAntigo']."'>
+						<input name='precoAntigo' formControlName='sGPTypeDeliveryId' type='text' class='form-control' value='".$registro['PrecoAntigo']."' disabled>
 						<label for='precoNovo'>Preço(Atual)</label>
-						<input name='precoNovo' formControlName='sGPTypeDeliveryId' type='text' class='form-control' value='".$registro['PrecoAtual']."'><br>
+						<input name='precoNovo' formControlName='sGPTypeDeliveryId' type='text' class='form-control' value='".$registro['PrecoAtual']."' disabled><br>
 						<label for='descricao'>Descrição</label><br>
-						<input type='text' id='descricao' name='descricao' value='".$registro['Descricao']."'>
-					</div>
-
-					<div class='btn-novo-salvar'>
-						<input type='submit' name='salvar' value='Salvar'>						
-					</div>
+						<input type='text' id='descricao' name='descricao' value='".$registro['Descricao']."' disabled>
+					</div>	
 				</form>
 			</div>
 		</section><!-- formulario de cadastro roupa -->
