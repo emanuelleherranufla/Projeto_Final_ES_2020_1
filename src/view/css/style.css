@@ -220,7 +220,7 @@ header{
 
 /*** seção produtos ***/
 .lancamentos{
-	padding: 550px 2%;
+	padding: 550px 2% 50px 2%;
 }
 
 .lancamentos .container{
@@ -235,7 +235,7 @@ header{
 }
 
 .roupa-img{
-	background-image: url('../imagens/vestido.jpg');
+	background-image: url('../imagens/produto.jpg');
 	background-size: 100% 100%;
 	padding-top: 100%;
 }
@@ -824,4 +824,14 @@ form label{
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);	
 	padding: 30px 2%;
 	margin-bottom: 70px;
+}
+
+/*** exibição de produtos ****/
+.produtos{
+	padding: 0 2%;
+}
+
+.produtos .container{
+	position: relative;
+	padding: 0 0;
 }

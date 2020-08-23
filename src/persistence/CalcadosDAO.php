@@ -52,6 +52,11 @@ class CalcadosDAO{
 		return $res;
 	}
 
+	function consultar_calcados($conn){
+		$sql = "SELECT Codigo, Nome, PrecoAtual FROM calcado";
+		$res = $conn->query($sql);
+		return $res;		
+	}
 }
 
 ?>

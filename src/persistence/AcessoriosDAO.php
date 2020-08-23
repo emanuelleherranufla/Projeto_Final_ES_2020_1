@@ -40,6 +40,12 @@ class AcessoriosDAO{
 		$res = $conn->query($sql);
 		return $res;
 	}
+
+	function consultar_acessorio($conn){
+		$sql = "SELECT Codigo, Nome, PrecoAtual FROM acessorio";
+		$res = $conn->query($sql);
+		return $res;		
+	}
 }
 
 ?>

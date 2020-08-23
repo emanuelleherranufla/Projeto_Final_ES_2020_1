@@ -45,6 +45,17 @@ class RoupasDAO{
 		return $res;
 	}
 
+	function consultar_roupas_feminino($conn){
+		$sql = "SELECT Codigo, Nome, PrecoAtual FROM roupa WHERE Tipo = 'Feminino'";
+		$res = $conn->query($sql);
+		return $res;		
+	}
+
+	function consultar_roupas_masculino($conn){
+		$sql = "SELECT Codigo, Nome, PrecoAtual FROM roupa WHERE Tipo = 'Masculino'";
+		$res = $conn->query($sql);
+		return $res;		
+	}
 }
 
 ?>
