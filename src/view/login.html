@@ -65,8 +65,8 @@
 		<div class="container">
 			<p>Se você já possui uma conta, basta fazer o login utilizando seu e-mail e senha!</p>
 			<form action="..\controller\login.php" method="POST">
-				<input type="e-mail" name="email" placeholder="E-mail" required>
-				<input type="password" name="senha" placeholder="Senha" required>
+				<input type="e-mail" name="email" placeholder="E-mail" maxlength="50" required>
+				<input type="password" name="senha" placeholder="Senha" maxlength="20" required>
 				<a href="" class="link1">Esqueceu sua senha?</a>
 				<a href="cadastro.html" class="link2">Ainda não possui uma conta? Cadastre-se!</a>
 				<input type="submit" name="entrar" value="Entrar">				

@@ -78,12 +78,14 @@ if($res->num_rows > 0){
 	while($registro = $res->fetch_assoc()){
 	    echo "
 				<div class='produto-destaque' style='max-height: 500px;'>
-					<div class='roupa-img'></div>
-					<h3>Código ".$registro['Codigo']."</h3>
-					<h2>".$registro['Nome']."</h2>
-					<h4>Por: </h4>
-					<h3>R$".$registro['PrecoAtual']."</h3>
-					<a href=''>Comprar!</a>
+					<form method='POST' action='exibe-produto.php'>
+						<div class='roupa-img'></div>
+						<h3>Código ".$registro['Codigo']."</h3>
+						<h2>".$registro['Nome']."</h2>
+						<h4>Por: </h4>
+						<h3>R$".$registro['PrecoAtual']."</h3>
+						<input type='submit' name='comprar' value='Comprar!'>
+					</form>
 				</div><!-- produto destaque -->";
 	}
 

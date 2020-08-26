@@ -274,9 +274,9 @@ header{
 	display: inline;
 }
 
-.produto-destaque a{
+.produto-destaque input[type=submit]{
 	text-align: center;
-	text-decoration: none;
+	border: none;
 	font-family: 'K2D', sans-serif;
 	display: block;
 	padding: 10px;
@@ -284,6 +284,7 @@ header{
 	color: white;
 	border-radius: 30px;
 	margin-top: 10px;
+	cursor: pointer;
 }
 
 /**** gerenciar produtos ****/
@@ -413,7 +414,7 @@ header{
 /*** tela cadastro ***/
 .card-cadastro .container{
 	max-width: 800px;
-	min-height: 800px;
+	min-height: 750px;
 	background: #FFFFFF;
 	border: 1px solid #E0E0E0;
 	box-sizing: border-box;
